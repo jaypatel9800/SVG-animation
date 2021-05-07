@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+
+#icon{
+    animation: icon 2s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+#right_wheel, #left_wheel {
+    animation: rotation 4s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#man_on_bike, #hat {
+    animation: bike 1s ease-in-out infinite alternate-reverse;
+    transform-origin: bottom;
+}
+
+
+@keyframes icon{
+    from{
+        transform: scale(0.7);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
+@keyframes rotation {
+    100%{transform: rotate(360deg);}
+}
+
+@keyframes bike {
+    from{
+        transform: rotatex(0deg);
+    }
+    to{
+        transform: rotatex(15deg);
+    }
+}
+
+
